@@ -1,0 +1,109 @@
+:root{
+    --card1-color:hsl(31, 77%, 52%);
+    --card2-color:hsl(184, 100%, 22%);
+    --card3-color:hsl(179, 100%, 13%);
+    --main-color:hsl(0, 0%, 95%);
+    --p-color: hsla(0, 0%, 100%, 0.75);
+    --heading-font:'Big Shoulders Display',sans-serif;
+    --p-font:'Lexend Deca',sans-serif;
+}
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    width:97%;
+    background-color: var(--main-color);
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    scroll-behavior: smooth;
+}
+.container{
+    padding:15px;
+    height:100vh;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+} 
+.container .col{  
+    padding: 50px;
+    height:490px;
+}
+.container .col1{
+    background-color: var(--card1-color);
+    border-radius: 3% 0 0 3%;
+    -webkit-border-radius: 3% 0 0 3%;
+    -moz-border-radius: 3% 0 0 3%;
+    -ms-border-radius: 3% 0 0 3%;
+    -o-border-radius: 3% 0 0 3%;
+}
+.container .col2{
+    background-color: var(--card2-color);
+}
+.container .col3{
+    background-color: var(--card3-color);
+    border-radius: 0 3% 3% 0;
+    -webkit-border-radius: 0 3% 3% 0;
+    -moz-border-radius: 0 3% 3% 0;
+    -ms-border-radius: 0 3% 3% 0;
+    -o-border-radius: 0 3% 3% 0;
+}
+@media(max-width:650px){
+    .container .col1{
+        border-radius: 3% 3% 0 0;
+        -webkit-border-radius: 3% 3% 0 0;
+        -moz-border-radius: 3% 3% 0 0;
+        -ms-border-radius: 3% 3% 0 0;
+        -o-border-radius: 3% 3% 0 0;
+}  
+.container .col3{
+        border-radius: 0 0 3% 3%;
+        -webkit-border-radius: 0 0 3% 3%;
+        -moz-border-radius: 0 0 3% 3%;
+        -ms-border-radius: 0 0 3% 3%;
+        -o-border-radius: 0 0 3% 3%;
+}
+}
+.col h1{
+    font-family: var(--heading-font);
+    color: var(--main-color);
+}
+.col p{
+    font-family: var(--p-font);
+    color: var(--p-color);
+    margin: 30px 0 50px;
+    line-height: 1.8;
+}
+.col .button{
+    cursor: pointer;
+    margin-left:-15px;
+    padding:15px 30px;
+    width:fit-content;
+    background-color: var(--main-color);
+    border:1px solid var(--main-color);
+    border-radius: 25px;
+    font-family: var(--p-font);
+    letter-spacing: -1px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+.col1 .button{
+    color:var(--card1-color);
+}
+.col2 .button{
+    color:var(--card2-color);
+}
+.col3 .button{
+    color:var(--card3-color);
+}
+.col1 .button:hover,
+.col2 .button:hover,
+.col3 .button:hover{
+    background-color: transparent;
+    color: white;
+}
